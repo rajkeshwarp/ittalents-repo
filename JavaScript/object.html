@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object example</title>
+	<script type="text/javascript">
+		
+		// Object very basic
+		var person1 = {
+			name: 'Rajkeshwar',
+			city: 'Hyderabad',
+			address: {
+				street: 'Masid banda',
+				pin: 500084
+			}
+		};
+
+		console.log(person1);
+
+		var item = {
+			name: 'fruit',
+			values: ['Apple', 'Banana', 'Guava', 'Grapes'],
+			info: function() {
+				console.log('Info about: ', this.name);
+			}
+		};
+
+		console.log(item);
+
+		var obj = {};
+		obj.name = 'Satish';
+		obj.dep = 'Coding';
+		obj.getInfo = function() {
+			console.log('Info about : ', this.name);
+		}
+
+	</script>
+</head>
+<body>
+""
+	<h1>JavaScript object example</h1>
+
+</body>
+</html>

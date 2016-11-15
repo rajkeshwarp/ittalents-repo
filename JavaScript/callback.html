@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>callback example</title>
+	<script type="text/javascript">
+		
+		function onStart( callback ) {
+			console.log('onStart called');
+
+			callback();
+		}
+
+		onStart(function() {
+			console.log('callback fn is called');
+		});
+
+	</script>
+</head>
+<body>
+	<h1>callback function example</h1>
+</body>
+</html>

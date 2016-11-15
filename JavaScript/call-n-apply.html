@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Call and Apply</title>
+	<script type="text/javascript">
+		
+		var obj = {
+			name: 'Rajkeshwar',
+			city: 'Hyderabad'
+		};
+
+		function showDetails() {
+			console.log(this.name+' '+this.city);
+		}
+
+		showDetails.call(obj);
+
+		showDetails.apply(obj);
+
+		function showDetails2() {
+			console.log('arguments : ', arguments[0], arguments[1]);
+			console.log(this.name+' '+this.city);
+		}
+
+		showDetails2.call(obj, 'call', 'example');
+
+		showDetails2.call(obj, ['apply', 'example']);
+
+		// Call and apply used to change the contex of calling method.
+		// the showDetails method is a member of window object. But using 
+		// call and apply we are applying that method on `obj` object.
+
+		// Diff between call and apply
+		// Only the difference between call and apply is call takes 
+		// the 2nd argument as list of arguments where apply takes the 
+		// 2nd argument as an array
+
+	</script>
+</head>
+<body>
+	<h1>Call and Apply</h1>
+</body>
+</html>

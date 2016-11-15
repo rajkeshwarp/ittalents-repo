@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope example</title>
+	<script type="text/javascript">
+
+		// Local and Global scope
+
+		var g1 = 'Global1';
+
+		function show() {
+			// g2 is local to show method cannot be accessed outside of show.
+			var g2 = 'Local to show';
+
+			// Since g1 is global variable. But we have defined it locally also.
+			// So local g1 will be given preference and it will not be accessible 
+			// outside of show method.
+			var g1 = 'Local1';
+
+			// If we dont write var for g3 it is a global 
+			// variable and accessible anywhere.
+			g3 = 'global3';
+			console.log('g1: %o, g2: %o, g3: %o', g1, g2, g3);
+		}
+
+		show();
+		console.log('g3  outside: ', g3);
+		console.log('g1  outside: ', g1);
+	</script>
+</head>
+<body>
+	<h1>Scope in JavaScript</h1>
+</body>
+</html>

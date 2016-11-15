@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String methods</title>
+	<script type="text/javascript">
+		var string = "This is a split example";
+
+		var strArr = string.split(' ');
+		console.log('split : ', strArr);
+
+		var arrStr = strArr.join(' ');
+		console.log('split : ', arrStr);
+
+		function reverse( string ) {
+			return string.split(' ').reverse().join(' ');
+		}
+
+		var reverseStr = reverse(string);
+		console.log('reversed string: ', reverseStr);
+	</script>
+</head>
+<body>
+	<h1>String methods</h1>
+</body>
+</html>

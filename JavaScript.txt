@@ -1,0 +1,11 @@
+
+JavaScript
+----------------------------
+1) Object
+2) Array
+3) function
+4) callback
+5) call and apply
+6) closures
+7) scope
+8) Prototype

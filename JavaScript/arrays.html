@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays example</title>
+	<script type="text/javascript">
+		// Array example push
+		// Push inserts elements at the last
+		
+		var fruits = ['Apple', 'Banana', 'Guava'];
+
+		console.log('fruits: ', fruits); 
+
+		fruits.push('Grapes'); // 4
+		fruits.push('Orange'); // 5
+
+		console.log('pushed Grapes and Orange: ', fruits); 
+		// ["Apple", "Banana", "Guava", "Grapes", "orange"]
+
+		// pop: removes the element from the last and returns the 
+		// removed element
+		fruits.pop(); // orange
+		console.log('pop: ', fruits); 
+		// ["Apple", "Banana", "Guava", "Grapes"]
+
+		///////////////////////////////////////////////////////////
+		// =============== Shift and Unshift =================== //
+		///////////////////////////////////////////////////////////
+		var cities = ['Bangalore', 'Kolkata', 'Hyderabad'];
+			console.log('cities: ', cities);
+
+			// shift: Removes the element from the begining of the array
+			// and returns the removed element
+			cities.shift();// ["Kolkata", "Hyderabad"]
+
+			// unshift: inserts the element in the begining of the array
+			// and returns the length of the array.
+			cities.unshift('Indore');
+
+		///////////////////////////////////////////////////////////
+		// ======================= concat ====================== //
+		///////////////////////////////////////////////////////////
+		var items1 = [25, 12, 15];
+		var items2 = [30, 60, 40];
+
+		var result = items1.concat(items2);
+		console.log('concat: ', result);
+
+		///////////////////////////////////////////////////////////
+		// ================ slice and splice =================== //
+		///////////////////////////////////////////////////////////
+		var countries = ['India', 'China', 'Nepal', 'Bhutan', 'Bangladesh'];
+		// slice gives the portion of the array but it wouldn't modify the 
+		// original array
+		var sliced = countries.slice(1, 4);
+
+		console.log('sliced: ', sliced);
+		console.log('countries: ', countries);	
+
+		var animals = ['Tiger', 'Lion', 'Dog', 'Cat'];
+
+		// Splice modifies the original array. It takes 3 parameters. first parameter
+		// is the index from where to start, 2nd parameter no of element you want to 
+		// remove and third the element you want to insert.
+		animals.splice(2,1);
+
+		console.log('splice(2,1): ', animals);
+
+		animals.splice(1,1, "Horse");
+		console.log('splice(1,1, "Horse"): ', animals);
+
+	</script>
+</head>
+<body>
+
+	<h2>Array's methods</h2>
+	<ol>
+		<li>push</li>
+		<li>pop</li>
+		<li>shift</li>
+		<li>unshift</li>
+		<li>concat</li>
+		<li>slice</li>
+		<li>splice</li>
+	</ol>
+</body>
+</html>

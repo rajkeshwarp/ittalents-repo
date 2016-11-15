@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function example</title>
+	<script type="text/javascript">
+		
+		function showName( value ) {
+			console.log('showName called: ', value);
+		}
+
+		showName('Rajkeshwar');
+
+		var showName1 = function( value ) {
+			console.log('showName called: ', value);
+		}
+
+		showName1('sathish');
+
+		var obj = {
+			name: 'Rajkeshwar',
+			city: 'Hyderabad',
+			details: function() {
+				return this.name +' '+this.city;
+			}
+		};
+
+		var det = obj.details();
+		console.log('details : ', det);
+		
+	</script>
+</head>
+<body>
+	<h1>function example</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+
+UI Training
+----------------------------
+1) JavaScript
+2) HTML/CSS
+3) SASS
+4) jQuery
+5) Angularjs (1x, 2x)
+6) Nodejs
+7) MongoDB
+8) Express
+9) React
+10) Flux
+11) Redux
+12) ES6
+
+UI build Tools
+----------------------------
+1) Gulp
+
+UI Testing
+----------------------------
+1) Jasmine
+2) Karma
+
+Tools and IDEs
+---------------------------
+1) Sublime Text
+2) VS Code
+
+
+

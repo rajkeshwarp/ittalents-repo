@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closures example</title>
+	<script type="text/javascript">
+		
+		// Closures provides isolated scope in javascript.
+		// If we dont want to expose all the variables and method
+		// to outside object then we can use closures. It also used 
+		// to declare private method and variable
+
+		(function(){
+			// IIF: Immediate Invoking Function
+			// Also called Self Executing Function
+			console.log('This is IIF');
+		})();
+
+		// Passing parameter to IIF
+		(function( name, city ){
+
+			console.log('Parameters in IIF: %o, %o', name, city);
+
+		})('Rajkeshwar', 'Hyderabad');
+
+		
+		var jQuery = {
+			name: 'jQuery',
+			version: '1.0.3'	
+		};
+		
+		// From jquery syntax
+		(function( $, w, undefined){
+
+			console.log('$: %o, window: %o, undefined: %o', $, w, undefined);
+
+		})(jQuery, window || this );
+
+		
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
