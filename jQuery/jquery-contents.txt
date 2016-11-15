@@ -1,0 +1,31 @@
+
+jquery course content
+-------------------------------
+CHAPTER-1
+-----------------------
+1) Basic Selectors
+2) Basic Filters
+
+3) Advanced Selectors
+4) Advanced Filters
+5) Traversing:
+6) Creating Content
+7) Inserting Content
+8) Altering Content
+9) Manipulating Attributes
+10) Embedding Data
+11) CSS
+12) Binding and Unbinding Events
+13) Event Helpers
+14) The Event Object
+15) Showing and Hiding Elements
+16) Fade Effects
+17) Sliding Elements
+18) Custom Animations
+19) Basic AJAX:
+20) AJAX Helpers:
+21) AJAX With Data Types:
+22) AJAX Globals:
+23) CRUD operation with jQuery Ajax
+
+
