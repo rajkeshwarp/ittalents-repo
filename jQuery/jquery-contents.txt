@@ -1,14 +1,16 @@
 
 jquery course content
 -------------------------------
-CHAPTER-1
+CHAPTER-2
 -----------------------
 1) Basic Selectors
 2) Basic Filters
-
 3) Advanced Selectors
 4) Advanced Filters
 5) Traversing:
+
+CHAPTER-3
+-----------------------
 6) Creating Content
 7) Inserting Content
 8) Altering Content
