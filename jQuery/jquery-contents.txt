@@ -17,13 +17,22 @@ CHAPTER-3
 9) Manipulating Attributes
 10) Embedding Data
 11) CSS
+
+CHAPTER-4
+-----------------------
 12) Binding and Unbinding Events
 13) Event Helpers
 14) The Event Object
+
+CHAPTER-5
+-----------------------
 15) Showing and Hiding Elements
 16) Fade Effects
 17) Sliding Elements
 18) Custom Animations
+
+CHAPTER-6
+-----------------------
 19) Basic AJAX:
 20) AJAX Helpers:
 21) AJAX With Data Types:

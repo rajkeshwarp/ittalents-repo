@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax basic</title>
+	<style type="text/css">
+		.container {
+			width: 60%;
+			margin: 0 auto;
+		}
+		.panel {
+			border: 1px solid blue;
+			width: 100%;
+			height: 200px;
+			margin-top: 15px;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('#ajxbutton').on('click', function() {
+				console.log('ajxbutton clicked');
+
+				$.ajax({
+					url: 'http://jsonplaceholder.typicode.com/photos',
+					type: 'GET',
+					dataType: 'json',
+					success: function( data ) {
+						console.log('success : ', data);
+
+						for (var i = 0; i < 100; i++) {
+							$('.panel').append('<img  src="'+data[i].thumbnailUrl+'"/>');
+						}
+						
+					},
+					error: function( xhr ) {
+						console.log('Error : ', xhr);
+					}
+				})
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Basic Ajax example</h1>
+		<button id="ajxbutton">Call Ajax</button>
+		<div class="panel">
+			
+		</div>
+	</div>	
+</body>
+</html>

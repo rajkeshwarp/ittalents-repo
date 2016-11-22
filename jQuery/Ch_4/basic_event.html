@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic event</title>
+	<style type="text/css">
+		.container {
+			width: 60%;
+			margin: 0 auto;
+		}
+		.panel {
+			border: 1px solid blue;
+			height: 150px;
+			width: 400px;
+			margin-top: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 18px;
+		}
+
+	</style>
+	
+</head>
+<body>
+	<div class="container">
+		<h1>Event in JavaScript</h1>
+		<button id="jsbutton">Click me</button>
+		<div class="panel jspanel">
+			JavaScript event
+		</div>
+
+		<h1>Event in jQuery</h1>
+		<button id="jqbutton">Click me</button>
+		<div class="panel jqpanel">
+			jQuery event
+		</div>
+	</div>	
+
+	<script type="text/javascript" src="../jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		
+		// JavaScript event
+		var button = document.querySelector('#jsbutton');
+		var jspanel = document.querySelector('.jspanel');
+
+			button.addEventListener('click', function() {
+				console.log('jsbutton clicked');
+
+				jspanel.style.backgroundColor = 'yellow';
+			});
+
+		$(document).ready(function(){
+
+			// jQuery event
+			$('#jqbutton').on('click', function(){
+				console.log('jqbutton clicked');
+				$('.jqpanel').css('background-color', 'tomato');
+			});
+		});
+
+	</script>
+</body>
+</html>
