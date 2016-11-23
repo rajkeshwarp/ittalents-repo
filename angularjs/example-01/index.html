@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Angularjs data binding</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+</head>
+<body >
+	<h1>Angularjs data binding</h1>
+	<input type="text" ng-model="name"/>
+	<p>{{name}}</p>
+
+	<ul ng-init="emps=['Raj', 'Dinesh', 'Suresh']">
+		<li ng-repeat="emp in emps">{{emp}}</li>
+	</ul>
+	
+</body>
+</html>
