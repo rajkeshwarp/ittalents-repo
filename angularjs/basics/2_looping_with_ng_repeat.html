@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Looping with ng-repeat</title>
+	<script src="lib/angular.js"></script>
+</head>
+<body>
+	<h1>Looping with ng-repeat</h1>
+	<div ng-init="users=['Raj', 'Dinesh', 'Suresh', 'Mahesh']">
+		<ul>
+			<li ng-repeat="eachUser in users">{{eachUser}}</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+Angularjs contents
+----------------------------------------
+1) Data binding basic
+2) Looping with ng-repeat
+3) Adding a simple controller
+4) Using ng-model and ng-click directive
+5) Filtering and sorting data
+6) Adding a module and controller
+7) Adding a service and controller
+8) Adding a module configuration and routing
+9) Module controller factory
+10) Angular CRUD operation
+
+10) An application in Angularjs

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+	<title>Addng a module and route</title>
+	<style type="text/css">
+		nav ul {
+			list-style-type: none;
+			display: block;
+		}
+		nav ul li {
+			display: inline-block;
+			padding: 5px 25px;
+			border: 1px solid #ddd;
+		}
+		nav ul li a {
+			text-decoration: none;
+		}
+		nav ul li:hover {
+			background-color: #ddd;
+		}
+		[ng-view] {
+			border: 1px solid blue;
+			min-height: 200px;
+			width: 400px;
+		}
+	</style>
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
+</head>
+<body>
+	<h1>Addng a module and route</h1>
+	<nav>
+		<ul>
+			<li><a href="#/home">Home</a></li>
+			<li><a href="#/services">Services</a></li>
+			<li><a href="#/aboutus">Aboutus</a></li>
+		</ul>
+	</nav>
+
+	<!-- partials will be loaded here -->
+	<div ng-view></div>
+
+	<script type="text/javascript">
+		
+		angular
+			.module('demoApp', ['ngRoute'])
+			.config(function( $routeProvider ){
+
+				$routeProvider
+					.when('/home', {
+						template: '<h3>{{message}}</h3>',
+						controller: 'HomeCtrl'
+					})
+					.when('/services', {
+						templateUrl: '8_partial1.html',
+						controller: 'ServicesCtrl'
+					})
+					.when('/aboutus', {
+						templateUrl: '8_partial2.html',
+						controller: 'AboutusCtrl'
+					})
+			})
+			.controller('HomeCtrl', function( $scope ) {
+				console.log('Home controller called');
+				$scope.message = 'This is home template';
+			})
+			.controller('ServicesCtrl', function( $scope ) {
+				console.log('ServicesCtrl called');
+
+				$scope.users = [
+					{name: 'Rajkeshwar', city: 'Hyderabad'},
+					{name: 'Santosh', city: 'Kolkata'},
+					{name: 'Manish', city: 'Indore'},
+					{name: 'Suresh', city: 'Bangalore'},
+					{name: 'Nilesh', city: 'New Delhi'},
+					{name: 'Abhimanyu', city: 'Jamsedpur'},
+					{name: 'Bishwajeet', city: 'Kolkata'},
+					{name: 'Joognu', city: 'Cuttack'}
+				];
+			})
+			.controller('AboutusCtrl', function( $scope ) {
+				console.log('ServicesCtrl called');
+
+				$scope.aboutus = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+				
+			})
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+	<title>Using ng-model and ng-click directive</title>
+	<script src="lib/angular.js"></script>
+</head>
+<body>
+	<h1>Using ng-model and ng-click directive</h1>
+	<div class="container" ng-controller="DemoCtrl">
+		<input type="text" ng-model="name"/>
+		<input type="text" ng-model="city"/>
+		<button ng-click="addUser()">Add user</button>
+		<ul>
+			<li ng-repeat="user in users">{{user.name}}-{{user.city}}</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		
+		angular.module('demoApp', [])
+			.controller('DemoCtrl', function( $scope ) {
+
+				$scope.users = [
+					{name: 'Rajkeshwar', city: 'Hyderabad'},
+					{name: 'Santosh', city: 'Kolkata'},
+					{name: 'Manish', city: 'Indore'},
+					{name: 'Suresh', city: 'Bangalore'},
+					{name: 'Sumit', city: 'New Delhi'}
+				];
+
+
+				$scope.addUser = function() {
+					var newName = $scope.name;
+					var newCity = $scope.city;
+
+					$scope.users.push({name:newName, city:newCity});
+				}
+			});
+
+	</script>
+</body>
+</html>

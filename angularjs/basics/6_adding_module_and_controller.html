@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+	<title>Using ng-model and ng-click directive</title>
+	<script src="lib/angular.js"></script>
+</head>
+<body>
+	<h1>Using ng-model and ng-click directive</h1>
+	<div class="container" ng-controller="DemoCtrl">
+
+		<h3>Add new user</h3>
+		<input type="text" ng-model="name"/>
+		<input type="text" ng-model="city"/>
+		<button ng-click="addUser()">Add user</button>
+
+		<h3>Filter user</h3>
+		<input type="text" ng-model="searchText"/>
+
+		<ul>
+			<li ng-repeat="user in users | filter:searchText | orderBy:'city'">{{user.name}}-{{user.city}}</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+
+		angular.module('controllers', [])
+			.controller('DemoCtrl', function( $scope ) {
+
+				$scope.users = [
+					{name: 'Rajkeshwar', city: 'Hyderabad'},
+					{name: 'Santosh', city: 'Kolkata'},
+					{name: 'Manish', city: 'Indore'},
+					{name: 'Suresh', city: 'Bangalore'},
+					{name: 'Nilesh', city: 'New Delhi'},
+					{name: 'Abhimanyu', city: 'Jamsedpur'},
+					{name: 'Bishwajeet', city: 'Kolkata'},
+					{name: 'Joognu', city: 'Cuttack'}
+				];
+
+
+				$scope.addUser = function() {
+					var newName = $scope.name;
+					var newCity = $scope.city;
+
+					$scope.users.push({name:newName, city:newCity});
+				}
+			});
+
+		angular.module('demoApp', ['controllers'])
+	</script>
+</body>
+</html>
