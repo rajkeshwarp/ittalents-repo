@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+	<title>Angular crud</title>
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+<body>
+	<div class="container" ng-controller="DemoCtrl">
+		<h1>Angular crud</h1>
+
+		<form class="form-inline">
+		  <div class="form-group">
+		    <label class="sr-only" for="name">Name</label>
+		    <input type="text" ng-model="user.name" class="form-control" placeholder="Name">
+		  </div>
+		  <div class="form-group">
+		    <label class="sr-only" for="username">Username</label>
+		    <input type="text" ng-model="user.username" class="form-control" placeholder="Username">
+		  </div>
+		  <div class="form-group">
+		    <label class="sr-only" for="email">Email</label>
+		    <input type="email" ng-model="user.email" class="form-control" placeholder="Email">
+		  </div>
+		  <button type="submit" ng-click="addNewUser()" class="btn btn-success">Add User</button>
+		</form>
+		<h1></h1>
+		<table class="table table-bordered">
+	  		<thead class="bg-primary">
+	  			<th>ID</th>
+	  			<th>Name</th>
+	  			<th>Username</th>
+	  			<th>Email</th>
+	  			<th>Edit|Delete</th>
+	  		</thead>
+	  		<tbody>
+	  			<tr ng-repeat="user in users track by $index">
+	  				<td>
+	  					<span>{{user.id}}</span>	  					
+	  				</td>
+	  				<td>
+	  					<span ng-if="!user.isEdit">{{user.name}}</span>
+	  					<input ng-if="user.isEdit" type="text" ng-model="user.name"/>
+	  				</td>
+	  				<td>
+	  					<span ng-if="!user.isEdit">{{user.username}}</span>
+	  					<input ng-if="user.isEdit" type="text" ng-model="user.username"/>
+	  				</td>
+	  				<td>
+	  					<span ng-if="!user.isEdit">{{user.email}}</span>
+	  					<input ng-if="user.isEdit" type="text" ng-model="user.email"/>
+	  				</td>
+	  				<td>
+	  					<i ng-if="!user.isEdit" 
+	  					   ng-click="edit($index)" class="glyphicon glyphicon-pencil"></i>
+	  					<i ng-if="user.isEdit" 
+	  					   ng-click="update($index)" class="glyphicon glyphicon-ok"></i> |
+	  					<i ng-click="delete($index)" class="glyphicon glyphicon-trash"></i>
+	  				</td>
+	  			</tr>
+	  		</tbody>
+		</table>
+	</div>
+	
+
+	<script src="lib/angular.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
