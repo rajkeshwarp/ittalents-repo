@@ -12,4 +12,13 @@ Angularjs contents
 9) Module controller factory
 10) Angular CRUD operation
 
-10) An application in Angularjs
+
+An application in Angularjs
+------------------------------------------
+1) Gulp build tasks
+2) SASS
+3) MongoDB, Express, Nodejs (service)
+4) Angularjs (UI)
+5) Bootstrap
+6) Authentication
+

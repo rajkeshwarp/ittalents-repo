@@ -18,6 +18,7 @@ UI Training
 UI build Tools
 ----------------------------
 1) Gulp
+2) Nodejs
 
 UI Testing
 ----------------------------
@@ -28,6 +29,29 @@ Tools and IDEs
 ---------------------------
 1) Sublime Text
 2) VS Code
+
+
+UI Tools setup
+-----------------------------------
+1) Nodejs
+   https://nodejs.org/en/download/
+
+   a) To check nodejs is installed 
+   cmd-> node -v
+   a) To check npm is installed 
+   cmd-> npm -v
+
+2) Gulp
+   http://gulpjs.com/
+   a) To check gulp is installed 
+   cmd-> gulp -v
+
+3) Bower 
+   npm install -g bower
+   https://bower.io/
+   a) To check bower is installed 
+   cmd-> bower -v
+
 
 
 

@@ -1,0 +1,10 @@
+
+Gulp contents
+-----------------------------------
+1) Concatenation task
+2) Minification task
+3) Watch task
+4) Copy task
+5) Clean task
+6) Browser sync task
+7) Wiredep

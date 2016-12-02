@@ -1,0 +1,15 @@
+{
+  "name": "wiredep",
+  "version": "1.0.0",
+  "description": "A sample wiredep demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wiredep",
+    "gulp"
+  ],
+  "author": "rajkeshwar.mail@gmail.com",
+  "license": "ISC"
+}
